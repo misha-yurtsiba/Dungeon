@@ -5,6 +5,8 @@ public class ProjectInstaller : MonoInstaller
     
     public override void InstallBindings()
     {
+        BindSaveLoadService();
+        
         BindAssetProvider();
 
         BindStatesFactory();
@@ -12,6 +14,13 @@ public class ProjectInstaller : MonoInstaller
         BindSceneLoader();
         
         BindGameStateMachine();
+    }
+
+    private void BindSaveLoadService()
+    {
+        Container
+            .BindInterfacesAndSelfTo<SaveLoadService>()
+            .AsSingle();
     }
 
     private void BindSceneLoader()

@@ -1,20 +1,18 @@
 using UnityEngine;
+using Zenject;
 
 public class MenuRunner : MonoBehaviour
 {
-    public void Initialize()
-    {
-        
-    }
-}
-
-public class UiScreen : MonoBehaviour
-{
-    public void Show(){}
-    public void Hide(){}
-}
-
-public class ScreenWithPages : UiScreen
-{
+    private MainMenuUiManager _mainMenuUiManager;
     
+    [Inject]
+    private void Construct(MainMenuUiManager mainMenuUiManager)
+    {
+        _mainMenuUiManager = mainMenuUiManager;
+    }
+    
+    public void Run()
+    {
+        _mainMenuUiManager.Initialize();
+    }
 }

@@ -16,12 +16,12 @@ MonoBehaviour:
   m_GUID: ab350ef38f1ff7341b82b2ac8343457b
   m_SerializeEntries:
   - m_GUID: 868f2820c67dbdb44801b0427dc237da
-    m_Address: GamePlay
+    m_Address: Gameplay
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 95e59d61169a7a2409cfff17cc33b566
-    m_Address: Assets/Scenes/Bootstrap.unity
+    m_Address: Bootstrap
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

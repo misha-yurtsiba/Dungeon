@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
@@ -7,7 +8,12 @@ public class LoadingCurtain : MonoBehaviour
     [SerializeField] private CanvasGroup _canvasGroup;
 
     [SerializeField] private float _fadeTime = 1;
-    
+
+    private void Awake()
+    {
+        _canvasGroup.alpha = 0;
+    }
+
     public UniTask Show()
     {
         return _canvasGroup

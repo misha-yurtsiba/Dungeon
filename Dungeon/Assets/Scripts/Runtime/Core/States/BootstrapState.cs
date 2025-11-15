@@ -17,6 +17,8 @@ public class BootstrapState : IState
         
         _stateMachine.AddState<LoadingMenuState>(_statesFactory.Create<LoadingMenuState>());
         _stateMachine.AddState<MainMenuState>(_statesFactory.Create<MainMenuState>());
+        _stateMachine.AddState<LoadingGameplayState>(_statesFactory.Create<LoadingGameplayState>());
+        _stateMachine.AddState<GameplayState>(_statesFactory.Create<GameplayState>());
         
         _stateMachine.Enter<LoadingMenuState, SceneNames>(SceneNames.MainMenu);
     }
